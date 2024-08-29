@@ -37,6 +37,50 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+    <style>
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(128, 0, 0, 0.8);
+            /* Navy dengan transparansi */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .bottom-bar .text {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .bottom-bar .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .bottom-bar .buttons a {
+            background-color: white;
+            color: #800000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .bottom-bar .buttons a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .bottom-bar .buttons a i {
+            font-size: 18px;
+        }
+    </style>
 </head>
 
 <body class="index-page">
@@ -45,6 +89,19 @@
 
     <main class="main">
         @yield('content')
+        <div class="bottom-bar">
+            <div class="text">Chat & Konsultasi Dokter disini!</div>
+            <div class="buttons">
+                <a href="tel:+082117105560">
+                    <i class="fas fa-phone-alt"></i>
+                    Klik Telepon
+                </a>
+                <a href="https://wa.me/6282117105560?text=Halo admin, saya ingin berkonsultasi" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Klik WhatsApp
+                </a>
+            </div>
+        </div>
     </main>
 
     @include('layouts.partials.footer')
